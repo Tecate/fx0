@@ -4,6 +4,7 @@ $grey1: #f2f2f2;
 $grey2: #fafafa;
 $grey3: #666;
 $grey4: #404040;
+$grey5: #24292e;
 $bg-grey: #fdfdfd;
 $black: #000;
 $white: #fff;
@@ -32,7 +33,9 @@ a:hover { color: $gold; text-decoration: none; }
 
 .header {
 	width: 100%;
-	background: $grey1;
+	background: $grey5;
+	a:link, a:visited { color: $white; }
+	a:hover { color: $gold; }
 }
 
 .header-wrapper {
@@ -58,49 +61,6 @@ a:hover { color: $gold; text-decoration: none; }
 	span { margin: 0px 15px; }
 }
 
-/*
-.head-wrapper {
-	width: 100%;
-	background: $grey1;
-	overflow: visible;
-	display: block;
-}
-
-.fx0-head {
-	overflow: visible;
-	max-width: 1140px;
-	display: block;
-	margin: 0px auto;
-	font-family: Inconsolata, monospace;
-	font-weight: 700;
-	color: $black;
-	text-align: center;
-	.brand {
-	//	margin: 0px 150px;
-		padding: 10px 25px;
-		font-size: 46px;
-		text-align: left;
-		display: inline-block;
-		background: $grey1;
-//		float: left;
-		a:link { text-decoration: none; }
-	}
-	.nav {
-		overflow: visible;
-		margin: 0px auto;
-		line-height: 110px;
-		//height: 66px;
-		vertical-align: bottom;
-		font-family: 'Karla', sans-serif;
-		display: inline-block;
-		  height: auto;
-  min-height: 100% !important;
-		border-bottom: 1px solid $gold;
-		span { display: inline-block; margin: 0px 15px; }
-		a:link { text-decoration: none; color: $grey3; }
-	}
-}
-*/
 .content {
 	color: #1a1a1a;
 	font-family: Inconsolata, monospace;
@@ -108,6 +68,7 @@ a:hover { color: $gold; text-decoration: none; }
 	background: $bg-grey;
 	border: 1px solid $grey1;
 	border-top: 0px solid $grey1;
+	padding-bottom: 20px;
 	p { padding: 10px; }
 	h1 {
 		background: $grey1;
@@ -154,6 +115,7 @@ a:hover { color: $gold; text-decoration: none; }
 table {
 	td { padding: 3px; }
 	tr:nth-child(odd){ background: $grey1; }
+	tr th { background: $grey3; color: $white; }
 }
 
 .download-table {
@@ -196,12 +158,15 @@ table {
 	.intro-right { display: flex; align-items:center; justify-content: center; background: url('../img/ag-square.png'); }
  }
 
- .footer {
+.footer {
  	width: 100%;
- 	margin-top: 20px;
  	border-top: 1px solid $gold;
  	font-family: monospace;
-	p { padding: 10px; background: $white; } 
+ 	background: $grey5;
+	p {
+		padding: 10px;
+		a { color: $gold; }
+	} 
 }
 
 .fxos-screenshots {

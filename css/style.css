@@ -28,7 +28,11 @@ a:hover {
 
 .header {
   width: 100%;
-  background: #f2f2f2; }
+  background: #24292e; }
+  .header a:link, .header a:visited {
+    color: #fff; }
+  .header a:hover {
+    color: #EEC015; }
 
 .header-wrapper {
   margin: 0px auto;
@@ -52,56 +56,14 @@ a:hover {
   .nav span {
     margin: 0px 15px; }
 
-/*
-.head-wrapper {
-	width: 100%;
-	background: $grey1;
-	overflow: visible;
-	display: block;
-}
-
-.fx0-head {
-	overflow: visible;
-	max-width: 1140px;
-	display: block;
-	margin: 0px auto;
-	font-family: Inconsolata, monospace;
-	font-weight: 700;
-	color: $black;
-	text-align: center;
-	.brand {
-	//	margin: 0px 150px;
-		padding: 10px 25px;
-		font-size: 46px;
-		text-align: left;
-		display: inline-block;
-		background: $grey1;
-//		float: left;
-		a:link { text-decoration: none; }
-	}
-	.nav {
-		overflow: visible;
-		margin: 0px auto;
-		line-height: 110px;
-		//height: 66px;
-		vertical-align: bottom;
-		font-family: 'Karla', sans-serif;
-		display: inline-block;
-		  height: auto;
-  min-height: 100% !important;
-		border-bottom: 1px solid $gold;
-		span { display: inline-block; margin: 0px 15px; }
-		a:link { text-decoration: none; color: $grey3; }
-	}
-}
-*/
 .content {
   color: #1a1a1a;
   font-family: Inconsolata, monospace;
   width: calc(100% - 2px);
   background: #fdfdfd;
   border: 1px solid #f2f2f2;
-  border-top: 0px solid #f2f2f2; }
+  border-top: 0px solid #f2f2f2;
+  padding-bottom: 20px; }
   .content p {
     padding: 10px; }
   .content h1 {
@@ -166,6 +128,9 @@ table td {
   padding: 3px; }
 table tr:nth-child(odd) {
   background: #f2f2f2; }
+table tr th {
+  background: #666;
+  color: #fff; }
 
 .download-table {
   width: 100%; }
@@ -212,12 +177,13 @@ table tr:nth-child(odd) {
 
 .footer {
   width: 100%;
-  margin-top: 20px;
   border-top: 1px solid #EEC015;
-  font-family: monospace; }
+  font-family: monospace;
+  background: #24292e; }
   .footer p {
-    padding: 10px;
-    background: #fff; }
+    padding: 10px; }
+    .footer p a {
+      color: #EEC015; }
 
 .fxos-screenshots {
   width: 100%;

@@ -28,6 +28,9 @@ Operating Systems---------------------------------------------------------------
 FxOS 2.0 Japanese Stock ROM
 https://www.reddit.com/r/fx0/comments/4buwcy/fx0_jp_variant/
 
+Cyanogenmod 11 b4
+https://www.reddit.com/r/fx0/comments/58vqt5/cyanogenmod_110_b4/
+
 Android 4.4.4 KitKat Cyanogenmod 11
 https://www.reddit.com/r/fx0/comments/4s6us1/cyanogenmod_110_b3_stays_the_course/
 

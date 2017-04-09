@@ -1,0 +1,134 @@
+Tutorials ------------------------------------------------------------------------------------------
+
+Repartitioning Internal SD
+https://www.reddit.com/r/fx0/comments/4qwjz5/partitioned/
+https://www.reddit.com/r/fx0/comments/4pfvwt/repartitioning_internal_sd_card_to_a_proper_size/
+
+Installing TWRP and Cyanogenmod 11
+https://www.reddit.com/r/fx0/comments/4yyh31/cyanogenmod_11_tutorial/
+
+Turn Off Screen Reader On Stock FxOS
+https://www.reddit.com/r/fx0/comments/52n3j5/how_to_turn_off_screen_reader_with_fx0/
+
+Installing FxOS 2.6 (Latest)
+https://www.reddit.com/r/fx0/comments/430x8q/how_to_install_firefox_os_26_en_lg_fx0/
+
+Enable Fastboot Access
+https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information/
+
+How to install apps to LG FX0 connecting with PC and using webIDE
+https://www.reddit.com/r/fx0/comments/456ijd/how_to_install_apps_to_lg_fx0_connecting_with_pc/
+
+How to make long messages be sent as concatenated SMS on the Japanese variant
+https://gist.github.com/feklee/a4ebec0a8c49766e37b14d7052c81e9d
+
+
+Operating Systems--------------------------------------------------------------------------------
+
+FxOS 2.0 Japanese Stock ROM
+https://www.reddit.com/r/fx0/comments/4buwcy/fx0_jp_variant/
+
+Android 4.4.4 KitKat Cyanogenmod 11
+https://www.reddit.com/r/fx0/comments/4s6us1/cyanogenmod_110_b3_stays_the_course/
+
+FxOS 2.6
+https://www.reddit.com/r/fx0/comments/47makh/fxos_26_compatibility_update_package/
+
+Accessories -----------------------------------------------------------------------------------
+
+Battery
+http://auonlineshop.kddi.com/disp/CSfLastGoodsPage_001.jsp?GOODS_NO=5063&dispNo=001001001023007
+
+Back Cover
+http://auonlineshop.kddi.com/disp/CSfLastGoodsPage_001.jsp?GOODS_NO=5062&dispNo=001001
+
+Bumper Case
+http://auonlineshop.kddi.com/disp/CSfLastGoodsPage_001.jsp?GOODS_NO=5038&dispNo=001007001011007
+
+Clear Back Cover
+http://auonlineshop.kddi.com/disp/CSfLastGoodsPage_001.jsp?GOODS_NO=5039&dispNo=001007001011007
+
+Screen Protector
+http://auonlineshop.kddi.com/disp/CSfLastGoodsPage_001.jsp?GOODS_NO=5040&dispNo=001001013023
+
+Information -----------------------------------------------------------------------------------
+
+Official Site
+http://au-fx.kddi.com/
+
+Carrier Compatability
+https://www.frequencycheck.com/compatibility/AK2oQ/lg-au-fx0-lgl25/countries
+
+Quick Manual
+http://media.kddi.com/app/publish/torisetsu/pdf/lgl25_basic_e.pdf
+
+Service Manual
+https://drive.google.com/file/d/0B8LczLPMs6nnTnFnS21jN2hHVUU/view?usp=sharing
+
+LG Source Code
+http://opensource.lge.com/osSch/list?types=ALL&search=lgl25_ffos
+
+3D CAD Data
+http://au-fx.kddi.com/creators/
+
+3D Printed Cases
+https://3d.auone.jp/
+
+Fx0 Teardown
+http://www.ewisetech.com/Device/5677/1932.aspx
+
+Downloads --------------------------------------------------------------------------------
+
+Windows USB Drivers
+http://tool.xcdn.gdms.lge.com/dn/downloader.dev?fileKey=STsdtJ29465255122905102/LGMobileDriver_WHQL_Ver_4.0.3.exe
+
+CM11 b3
+https://drive.google.com/file/d/0B8LczLPMs6nnM2xXaFJhSkZ4MG8/view?usp=sharing
+
+CM11 b1
+https://drive.google.com/open?id=0B8LczLPMs6nnRkhTc1Q5RnZPX0k
+
+TWRP
+https://drive.google.com/open?id=0B8LczLPMs6nnemc2TUd3NEg1RmM
+
+Wallpapers
+https://drive.google.com/open?id=0B8LczLPMs6nnUHVsR2RuRFJLVlk
+
+Japanese FxOS Variant
+https://drive.google.com/file/d/0B8LczLPMs6nnLWZlNmVrYXVRaG8/view?usp=sharing
+
+Vendors ---------------------
+
+USA Amazon $189.75
+https://www.amazon.com/LG-Factory-Unlocked-Quad-Core-Smartphone/dp/B00UULNTHK
+
+Wordlwide Ebay $59.95 Soldout
+http://www.ebay.com/itm/LG-FX0-16GB-Factory-Unlocked-GSM-FireFox-OS-Quad-Core-Spmartphone-Gold-New-/391339855211
+
+
+Display
+4.70-inch
+
+Processor
+1.2GHz
+
+Front Camera
+ 2.1-megapixel
+
+Resolution
+ 720x1280 pixels
+
+RAM
+ 1.5GB
+
+OS
+ Firefox OS 2.0
+
+Storage
+16GB
+
+Rear Camera
+8-megapixel
+
+Battery capacity
+2370mAh

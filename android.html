@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Fx0 Fan Page</title>
+	<meta name="description" content="You Groove You Lose">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/jquery/3.0.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="header-wrapper">
+			<span class="brand"><a href="index.html">Fx0 <span>/</span> LGL25 <span>/</span> Madai</a></span>
+			<div class="nav">
+				<span><a href="index.html">Home</a></span>
+				<span><a href="android.html">Android</a></span>
+				<span><a href="tutorials.html">Tutorials</a></span>
+				<span><a href="downloads.html">Downloads</a></span>
+				<span><a href="vendors.html">Vendors</a></span>
+			</div>
+		</div>
+	</div>
+
+<div class="wrapper">
+	<div class="content">
+		<img class="dynamic-img" id="cm-logo" src="img/CyanogenMod_logo.png">
+		<div class="content-section">
+			<h1>Installing Cyanogenmod 11 on the Fx0 for the semi-noob</h1>
+			<p>Much respect and thanks to <a href="http://reddit.com/u/cutol">Cutol</a> <a href="https://github.com/culots?tab=overview&from=2016-08-01&to=2016-08-31&utf8=%E2%9C%93">[github]</a> for porting CM11 to the Fx0 (among other things). This guy's work is basically the only reason why people still use this phone. This phone would be pretty shit if it wasn't for him.
+			<p>If you're using windows or just want some screenshots of this process you should take a look at <a href="https://www.reddit.com/r/fx0/comments/4yyh31/cyanogenmod_11_tutorial/">this pictoral guide by CUBE075</a> a local copy of this pdf is available for download <a href="downloads/CyanogenLGFX0.pdf">here</a>.</p>
+			<p>You should do this as root or administrator. Make sure you have a micro sd card installed in your phone.</p>
+
+			<h2>Table of Contents</h2>
+			<ul>
+				<li><a href="#step1">Step 1</a>: Enabling ADB</li>
+				<li><a href="#step2">Step 2</a>: Backing up and uploading Cyanogenmod</li>
+				<li><a href="#step3">Step 3</a>: Flashing TWRP</li>
+				<li><a href="#step4">Step 4</a>: Installing Cyanogenmod</li>
+				<li><a href="#abridged">Abridged Version</a></li>
+			</ul>
+
+			<h2>Prerequisite files</h2>
+			<ul>
+				<li><a href="http://forum.xda-developers.com/showthread.php?t=2317790">ADB and Fastboot for windows</a> or android-tools package for linux</li>
+				<li><a href="downloads/jp-variant.zip">Cyanogenmod 11 b3</a></li>
+				<li><a href="downloads/twrp_302-madai01.img">TWRP 302 madai</a></li>
+			</ul>
+
+			<a name="step1"></a>
+			<h2>Step 1</h2>
+			<p>In step 1 we need to enable ADB connections so we can access the phone from the computer. I'm assuming you're running the stock FxOS 2.0 preinstalled on the phone.</p>
+			<p>Enable the developer menu:</p>
+			<pre>Settings > Device Information > More Information > Developer Menu: ON</pre>
+			<p>Enable adb connections:</p>
+			<pre>Settings > Developer > Debugging via USB > ADB and DevTools: ON</pre>
+			<p>Disable USB storage</p>
+			<pre>Settings > USB Storage: Disabled</pre>
+			<p>Now you can connect your phone to your computer.</p>
+
+			<a name="step2"></a>
+			<h2>Step 2</h2>
+			<p>In step 2 we will be connecting to the phone and backing up some essential files to the sd card and the computer. We will also be uploading the Cyanogenmod zip the the sd card.</p>
+			<p>Check if your device is recognised</p>
+			<pre class="cmd">adb devices</pre>
+			<p>You should see a device id output. If there is none you might want to try unlocking the phone and trying the command again.</p>
+			<p>Once you see that your device is connected you can now access your phone</p>
+			<pre class="cmd">adb shell</pre>
+			<p>Switch to root user</p>
+			<pre class="cmd">su</pre>
+			<p>Once we are logged in as the root user we can start backing the phone up. This step is extremely important if you want to avoid fucking your phone up irreparably. You need to have an external sd card mounted on the phone for these commands to work.</p>
+			<pre class="cmd-root">dd if=/dev/block/platform/msm_sdcc.1/by-name/laf of=/sdcard/laf.img</pre>
+			<pre class="cmd-root">dd if=/dev/block/platform/msm_sdcc.1/by-name/modemst1 of=/sdcard/modemst1.img</pre>
+			<pre class="cmd-root">dd if=/dev/block/platform/msm_sdcc.1/by-name/modemst2 of=/sdcard/modemst2.img</pre>
+			<p>We can close the adb connection now. (you can also press ctrl+d to logout)</p>
+			<pre class="cmd-root">exit</pre>
+			<pre class="cmd">exit</pre>
+			<p>Now that we have cloned the files to the sd card we can copy them to the computer.</p>
+			<pre class="cmd">adb pull /sdcard/laf.img</pre>
+			<pre class="cmd">adb pull /sdcard/modemst1.img</pre>
+			<pre class="cmd">adb pull /sdcard/modemst2.img</pre>
+			<p>Finally, we need to copy the Cyanogenmod zip file to the phone</p>
+			<pre class="cmd">adb push cm-11-20160710-UNOFFICIAL-madai.zip /sdcard/</pre>
+
+			<a name="step3"></a>
+			<h2>Step 3</h2>
+			<p>In step 3 we will be deleting the stock LG recovery partition and replacing it with TWRP.</p>
+			<p>Connect to your phone</p>
+			<pre class="cmd">adb shell</pre>
+			<p>Switch to root</p>
+			<pre class="cmd">su</pre>
+			<p>Delete the laf partition</p>
+			<pre class="cmd-root">dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/laf</pre>
+			<p>The command will output "no more space left on device" on completion. Close the connection and reboot.</p>
+			<pre class="cmd-root">exit</pre>
+			<pre class="cmd">exit</pre>
+			<pre class="cmd">adb reboot</pre>
+			<p>Power off the phone and unplug it from your computer</p>
+			<p>Hold volume up while plugging the phone into your computer. Your phone should now be in fastboot mode. If you see "[510] udc_start()" you can proceed.</p>
+			<p>Flash and boot TWRP</p>
+			<pre class="cmd">fastboot flash recovery twrp_302-madai01.img</pre>
+			<pre class="cmd">fastboot boot twrp_302-madai01.img</pre>
+			<p>The phone should boot into TWRP and prompt you to allow system modification. Swipe to allow modification.</p>
+			<a name="step4"></a>
+			<h2>Step 4</h2>
+			<p>In step 4 we backup and wipe the system before installing Cyanogenmod.</p>
+			<p>Once we are booted into TWRP we can make a backup of the phone as it is installed now</p>
+			<pre>Backup > select all partitions > Select Storage > Micro SDCard</pre>
+			<p>You can now swipe to backup. Once the backup is completed you can reboot to recovery. You may want to copy this backup to your computer for safe keeping.</p>
+
+			<p>Now that you have rebooted into recovery we can wipe the phone</p>
+			<pre>Wipe > Advanced Wipe > Select: System, Data, Cache</pre>
+			<p>You can now swipe to wipe the phone</p>
+			<p>When the wipe is finished go back to the main menu of TWRP and tap "Install". Select the cyanogenmod zip that we transferred to the sd card earlier and swipe to install.</p>
+			<pre>Install > Select cm-11-20160710-UNOFFICIAL-madai.zip</pre>
+			<p>Swipe to install and reboot to system. Enjoy your fx0 running Cyanogenmod.</p>
+
+			<a name="abridged"></a>
+			<h2>Abridged Version</h2>
+			<pre>--- in fxos ---
+Settings > Device Information > More Information > Developer Menu: ON
+Settings > Developer > Debugging via USB > ADB and DevTools: ON
+Settings > USB Storage: Disabled
+--- plug in phone ---
+adb shell
+su
+dd if=/dev/block/platform/msm_sdcc.1/by-name/laf of=/sdcard/laf.img
+dd if=/dev/block/platform/msm_sdcc.1/by-name/modemst1 of=/sdcard/modemst1.img
+dd if=/dev/block/platform/msm_sdcc.1/by-name/modemst2 of=/sdcard/modemst2.img
+exit
+exit
+adb pull /sdcard/laf.img
+adb pull /sdcard/modemst1.img
+adb pull /sdcard/modemst2.img
+adb push cm-11-20160710-UNOFFICIAL-madai.zip /sdcard/
+adb shell
+su
+dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/laf
+exit
+exit
+adb reboot
+--- boot into fastboot (hold vol up while plugging phone in) ---
+fastboot flash twrp_302-madai01.img
+fastboot boot twrp_302-madai01.img
+Backup > select all partitions > Select Storage > Micro SDCard
+Wipe > Advanced Wipe > Select: System, Data, Cache
+Install > Select cm-11-20160710-UNOFFICIAL-madai.zip</pre>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p><a href="http://scum.systems">Scum Systems</a></p>
+	</div>
+</div>
+</body>
+</html>
